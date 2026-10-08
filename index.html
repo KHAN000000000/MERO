@@ -1,21 +1,23 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى ميرهان ❤️</title>
+
+    <title>إلى ميرهان 🌷</title>
 
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: "Tahoma", sans-serif;
+            font-family: "Tahoma", Arial, sans-serif;
         }
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #1b1026, #4b2142, #8b3d63);
+            background: linear-gradient(135deg, #172554, #334155, #64748b);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,48 +26,39 @@
 
         .card {
             width: 90%;
-            max-width: 650px;
-            min-height: 480px;
-            background: rgba(255,255,255,0.12);
+            max-width: 680px;
+            min-height: 500px;
+            background: rgba(255,255,255,0.13);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255,255,255,0.25);
             border-radius: 30px;
-            padding: 40px;
+            padding: 45px 35px;
             text-align: center;
             color: white;
             box-shadow: 0 20px 60px rgba(0,0,0,0.35);
             position: relative;
         }
 
-        .heart {
-            font-size: 55px;
-            animation: heartbeat 1.5s infinite;
+        .icon {
+            font-size: 60px;
             margin-bottom: 15px;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.18);
-            }
         }
 
         .page {
             display: none;
-            animation: fade 0.7s ease;
+            animation: fadeIn 0.6s ease;
         }
 
         .page.active {
             display: block;
         }
 
-        @keyframes fade {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -75,28 +68,28 @@
         h1 {
             font-size: 38px;
             margin-bottom: 25px;
-            color: #ffd6e7;
+            color: #f8fafc;
         }
 
         h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #ffe5ef;
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #e2e8f0;
         }
 
         p {
             font-size: 21px;
-            line-height: 2;
-            color: #fff;
+            line-height: 2.1;
+            color: #f8fafc;
         }
 
         .highlight {
-            color: #ffb6d2;
+            color: #fbbf24;
             font-weight: bold;
         }
 
         .buttons {
-            margin-top: 35px;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -104,19 +97,18 @@
 
         button {
             border: none;
-            padding: 13px 25px;
-            border-radius: 30px;
+            padding: 13px 28px;
+            border-radius: 25px;
             cursor: pointer;
             font-size: 17px;
-            background: #ff6f9f;
+            background: #475569;
             color: white;
             transition: 0.3s;
         }
 
         button:hover {
-            background: #ff477f;
+            background: #1e293b;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255,71,127,0.4);
         }
 
         .counter {
@@ -125,30 +117,29 @@
             left: 0;
             right: 0;
             font-size: 14px;
-            color: #ffd6e7;
+            color: #cbd5e1;
         }
 
-        /* قلوب متحركة */
-        .floating-heart {
+        /* نجوم بسيطة في الخلفية */
+        .star {
             position: fixed;
-            bottom: -30px;
-            font-size: 20px;
-            animation: floatUp 6s linear infinite;
-            opacity: 0.7;
+            color: white;
+            opacity: 0.5;
+            animation: moveStar 7s linear infinite;
         }
 
-        @keyframes floatUp {
+        @keyframes moveStar {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(100vh);
                 opacity: 0;
             }
 
             20% {
-                opacity: 0.8;
+                opacity: 0.5;
             }
 
             100% {
-                transform: translateY(-110vh) rotate(360deg);
+                transform: translateY(-100vh);
                 opacity: 0;
             }
         }
@@ -161,63 +152,91 @@
 
     <!-- الصفحة الأولى -->
     <div class="page active">
-        <div class="heart">❤️</div>
+
+        <div class="icon">🌷</div>
 
         <h1>إلى ميرهان</h1>
 
         <p>
-            ميرهان...
+            ميرهان، حبيت أعملك الكارت البسيط ده
+            تقديرًا ليكي وبمناسبة إنك من الناس
+            الجميلة والمحترمة اللي سعدت جدًا إني عرفتها.
             <br><br>
-            يمكن الكلام بسيط، لكن أحيانًا كلمة صغيرة
-            بتكون وراها مشاعر كبيرة.
-            <br><br>
+
             وبكل صراحة...
-            <span class="highlight">أنتِ أجمل بنت في الشركة ❤️</span>
+            <br>
+
+            <span class="highlight">
+                أنتِ من أجمل البنات في الشركة 😊
+            </span>
+
+            <br><br>
+
+            وده رأي أخوكي بكل احترام ❤️
         </p>
+
     </div>
 
 
     <!-- الصفحة الثانية -->
     <div class="page">
-        <div class="heart">🌹</div>
 
-        <h2>ربنا يحفظك</h2>
+        <div class="icon">🤲</div>
+
+        <h2>ربنا يحرسك ويحفظك</h2>
 
         <p>
-            ربنا يحرسك ويحفظك من كل شر،
-            ويخلي الابتسامة دايمًا موجودة على وشك.
+            ربنا يحفظك من كل شر،
+            ويوفقك في شغلك وحياتك،
+            ويكتبلك دايمًا الخير والنجاح.
             <br><br>
-            أتمنى لك كل الخير والسعادة،
-            وتفضلي دايمًا بالشكل الجميل
-            والروح الجميلة اللي عرفتها منك.
+
+            وإن شاء الله تفضلي دايمًا
+            بنفس الروح الجميلة والأخلاق الحلوة،
+            وربنا يديم عليكي الفرحة والابتسامة.
         </p>
+
     </div>
 
 
     <!-- الصفحة الثالثة -->
     <div class="page">
-        <div class="heart">💖</div>
 
-        <h2>وأجمل حاجة...</h2>
+        <div class="icon">😊</div>
+
+        <h2>وأخيرًا...</h2>
 
         <p>
             أنا سعيد جدًا إني عرفتك،
-            وسعيد إن الصدفة خلتني أقابل إنسانة
-            جميلة ومحترمة زيك.
+            وسعيد إن الشغل كان سبب
+            إني أتعرف على شخصية محترمة وجميلة زيك.
             <br><br>
+
+            أتمنى لك كل الخير والسعادة،
+            وربنا يوفقك في كل خطوة جاية في حياتك.
+            <br><br>
+
             <span class="highlight">
-                وجودك في المكان بيخليه أجمل ❤️
+                تحيات أخوكي ياسين خان 🌷
             </span>
-            <br><br>
-            — من شخص سعيد إنه عرف ميرهان 🌹
         </p>
+
     </div>
 
 
+    <!-- أزرار التنقل -->
     <div class="buttons">
-        <button onclick="previousPage()">❮ السابق</button>
-        <button onclick="nextPage()">التالي ❯</button>
+
+        <button onclick="previousPage()">
+            ❮ السابق
+        </button>
+
+        <button onclick="nextPage()">
+            التالي ❯
+        </button>
+
     </div>
+
 
     <div class="counter" id="counter">
         الصفحة 1 من 3
@@ -231,7 +250,9 @@
     let currentPage = 0;
 
     const pages = document.querySelectorAll(".page");
+
     const counter = document.getElementById("counter");
+
 
     function showPage(index) {
 
@@ -270,33 +291,37 @@
     }
 
 
-    // إنشاء القلوب المتحركة
-    function createHeart() {
+    /* إنشاء نجوم متحركة */
 
-        const heart = document.createElement("div");
+    function createStar() {
 
-        heart.className = "floating-heart";
+        const star = document.createElement("div");
 
-        heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💖";
+        star.className = "star";
 
-        heart.style.left = Math.random() * 100 + "vw";
+        star.innerHTML = "✦";
 
-        heart.style.animationDuration =
-            (4 + Math.random() * 4) + "s";
+        star.style.left =
+            Math.random() * 100 + "vw";
 
-        heart.style.fontSize =
-            (15 + Math.random() * 25) + "px";
+        star.style.fontSize =
+            (10 + Math.random() * 15) + "px";
 
-        document.body.appendChild(heart);
+        star.style.animationDuration =
+            (4 + Math.random() * 5) + "s";
+
+        document.body.appendChild(star);
 
         setTimeout(() => {
-            heart.remove();
-        }, 8000);
+            star.remove();
+        }, 9000);
     }
 
-    setInterval(createHeart, 700);
+
+    setInterval(createStar, 700);
 
 </script>
 
 </body>
 </html>
+```
